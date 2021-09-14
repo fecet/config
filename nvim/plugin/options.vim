@@ -1,3 +1,6 @@
+set clipboard=unnamedplus
+set number
+set relativenumber
 set nocompatible
 filetype on
 filetype plugin on
