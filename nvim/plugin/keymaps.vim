@@ -2,6 +2,7 @@ nnoremap j gj
 nnoremap gj j
 nnoremap k gk
 nnoremap gk k
+noremap Q :q<CR>
 cnoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 nnoremap <silent> gb <c-^>
 " These commands will navigate through buffers in order regardless of which mode you are using
@@ -15,10 +16,32 @@ nnoremap <silent><leader>bp :BufferLineMovePrev<CR>
 nnoremap <silent><leader>x :bd<CR>
 
 " copy to system clipboard
-vmap <leader>y "+y
+nnoremap Y y$
 
-" paste to vim register
-nnoremap <leader>p "+p
+
+" IndeNtation
+nnoremap < <<
+nnoremap > >>
+
+
+noremap <silent> K 6k
+noremap <silent> J 6j
+
+" H key: go to the start of the line
+noremap <silent> H ^
+" L key: go to the end of the line
+noremap <silent> L $
+
+" inoremap <silent> <C-w> <C-W>
+imap <C-H> :tabprevious<cr>
+imap <C-L> :tabnext<cr>
+
+nmap <C-H> :tabprevious<cr>
+nmap <C-L> :tabnext<cr>
+
+map <leader>aq :qa<CR>
+map <leader>noh :noh<CR>
+
 
 " These commands will sort buffers by directory, language, or a custom criteria
 nnoremap <silent><leader>be :BufferLineSortByExtension<CR>

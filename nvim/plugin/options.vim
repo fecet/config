@@ -1,9 +1,11 @@
 set clipboard=unnamedplus
+set cursorline
 set number
 set relativenumber
 set nocompatible
 filetype on
 filetype plugin on
+set fileformat=unix
 set noeb
 syntax enable
 syntax on
@@ -12,8 +14,7 @@ set cmdheight=1
 set showcmd
 set ruler
 set laststatus=2
-set number
-set cursorline
+set title 
 set whichwrap+=<,>,h,l
 set ttimeoutlen=0
 " set timeoutlen=500
@@ -45,10 +46,11 @@ set wrap
 set foldmethod=marker
 set foldlevelstart=99
 " set relativenumber  
-" set mouse=a
+set mouse=a
 " set cursorcolumn
 " let g:indentLine_enabled = 1
-
+set guifont=monospace:h24"
+set dictionary+='~/.config/nvim/spell/en.utf-8.add'
 " code lens
 " command line lens menu
 set wildmenu
